@@ -1,0 +1,144 @@
+{% extends 'base-client.html.twig' %}
+{% block header %}
+	<header class="header-two">
+				<div class="top-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-8 col-12">
+								<ul class="left-widget">
+							<div class="col-md-6 col-sm-4 col-12">
+								<ul class="social-icon">
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.top-header -->
+
+				<div class="theme-menu-wrapper">
+					<div class="container">
+						<div class="bg-wrapper clearfix">
+							<div class="logo float-left"><a href="index.html"><img class="logmer" src="{{ asset('front/images/logo/Layer1.png') }}" alt=""></a></div>
+							<!-- ============== Menu Warpper ================ -->
+							<div class="menu-wrapper float-left">
+								<nav id="mega-menu-holder" class="clearfix"> 
+									<ul class="clearfix">
+									
+										<li><a href="{{path('userindex')}}">Profile</a></li>
+										<li><a href="{{ path('agence_edit', {'id': user.id}) }}">Profile Settings!</a></li>
+										
+									</ul>
+								</nav> <!-- /#mega-menu-holder -->
+							</div> <!-- /.menu-wrapper -->
+							<div class="right-widget float-right">
+								<ul>
+									<li class="cart-icon">
+										<a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
+									</li>
+									<li class="search-option">
+										<div class="dropdown">
+											<button type="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i></button>
+											<form action="#" class="dropdown-menu">
+												<input type="text" Placeholder="Enter Your Search">
+												<button><i class="fa fa-search"></i></button>
+											</form>
+										</div>
+									</li>
+								</ul>
+							</div> <!-- /.right-widget -->
+						</div> <!-- /.bg-wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.theme-menu-wrapper -->
+			  <!-- /.header-one -->
+			  </header>
+</header>
+{% endblock %}
+
+{% block body %}
+
+{% if is_granted('ROLE_USER') %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 pb-">
+            <!-- Account Sidebar-->
+            <div class="author-card pb-3">
+                <div class="author-card-cover" style="background-image: url(https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg);"></div>
+                <div class="author-card-profile">
+                    <div class="author-card-details">
+                        <h5 class="author-card-name text-lg">{{ app.user.username }}</</h5><span class="author-card-position">Joined February 06, 2017</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard">
+                 <a class="list-group-item" href="" target="__blank">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="fe-icon-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">Dashboard</div>
+                            </div><span class="badge badge-secondary"></span>
+                        </div>
+                    </a>
+                      <a class="list-group-item" href="{{ path('logout')}}" target="__blank">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="fe-icon-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium text-uppercase">Log Out</div>
+                            </div><span class="badge badge-secondary"></span>
+                        </div>
+                    </a>
+                    <div>
+                    <a>
+                 <img src="{{ path('generate_qr_code', {'id': user.id}) }}" alt="QR Code">
+                  </div>
+                    </a>
+                </nav>
+            </div>
+            </div>
+        
+        <!-- Profile Settings-->
+ <div class="col-lg-8 pb-5">
+  <form class="row form-custom">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="account-fn">UserName</label>
+        <input class="form-control" type="text" id="account-fn" value="{{ app.user.username }}" required="">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Une colonne vide pour séparer les champs -->
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="account-ln">Email Address</label>
+        <input class="form-control" type="text" id="account-ln" value="{{ app.user.email }}" required="">
+      </div>
+    </div>
+      <div class="col-md-6">
+      <!-- Une colonne vide pour séparer les champs -->
+    </div>
+     <div class="col-md-6">
+      <div class="form-group">
+        <label for="account-ln">Phone Number</label>
+        <input class="form-control" type="text" id="account-ln" value="{{ app.user.phonenumber }}" required="">
+      </div>
+    </div>
+     <div class="col-md-6">
+      <!-- Une colonne vide pour séparer les champs -->
+    </div>
+        <div class="col-md-6">
+       <div class="form-group">
+        <label for="account-ln">address</label>
+        <input class="form-control" type="text" id="account-ln" value="{{ app.user.adress }}" required="">
+      </div>
+    </div>
+  </form>
+</div>
+
+</div>
+{% else %}
+    <p>Please log in to view your information</p>
+{% endif %}
+ {% include 'specific-content.html.twig' %}
+{% endblock %}

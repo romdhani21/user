@@ -1,0 +1,23 @@
+{% extends 'base-back.html.twig' %}
+
+{% block footer %} {% endblock %}
+{% block body %}
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+<div>
+    <h1>Edit User</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.password) }}
+        {{ form_row(form.Photo) }}
+        <button type="submit" class="btn btn-primary">Save</button>
+    {{ form_end(form) }}
+      </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ {% block stylesheet %}
+		<meta charset="UTF-8">
+		<!-- Website Title -->
+		<title>Nedda - Business Corporation Bootstrap HTML Template</title>
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#061948">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#061948">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
+		<!-- Favicon -->                             
+		<link rel="icon" type="image/png" sizes="56x56" href="{{ asset('front/images/fav-icon/icon.png') }}" >
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="{{ asset('front/css/style.css') }}" >
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{{ asset('front/css/responsive.css') }}" >	
+	    
+ {% endblock %}
+
+{% block javascript %}
+		<!-- Optional JavaScript _____________________________  -->
+
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<!-- jQuery -->
+		<script src= "{{ asset('front/vendor/jquery.2.2.3.min.js') }}" ></script>
+		<!-- Popper js -->
+		<script src=  "{{ asset('front/vendor/popper.js/popper.min.js') }}" ></script>
+		<!-- Bootstrap JS -->
+		<script src="{{ asset('front/bootstrap/js/bootstrap.min.js') }}" ></script>
+		<!-- Camera Slider --> 
+		<script src= "{{ asset('front/vendor/Camera-master/scripts/jquery.mobile.customized.min.js') }}"></script>
+	    <script src= "{{ asset('front/vendor/Camera-master/scripts/jquery.easing.1.3.js') }}"></script> 
+	    <script src= "{{ asset('front/vendor/Camera-master/scripts/camera.min.js') }}"></script>
+	    <!-- menu  --> 
+		<script src= "{{ asset('front/vendor/menu/src/js/jquery.slimmenu.js') }}"></script>
+		<!-- WOW js -->
+		<script src="{{ asset('front/vendor/WOW-master/dist/wow.min.js') }}"></script>
+		<!-- owl.carousel --> 
+		<script src="{{ asset('front/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
+		<!-- js count to -->
+		<script src="{{ asset('front/vendor/jquery.appear.js') }}"></script>
+		<script src="{{ asset('front/vendor/jquery.countTo.js') }}"></script>
+		<!-- Fancybox -->
+		<script src="{{ asset('front/vendor/fancybox/dist/jquery.fancybox.min.js') }}"></script>
+		<!-- Language Stitcher -->
+		<script src="{{ asset('front/vendor/language-switcher/jquery.polyglot.language.switcher.js') }}"></script>
+		<!-- Google map js -->
+
+
+
+		<!-- Theme js -->
+		<script src="js/theme.js"></script>
+		<!--<script src="js/map-script.js"></script> -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuGD3coNF7878XNZo0CulQkXUhGiB2X1k"></script>
+		<script src="js/googlemap.js"></script>
+				<link rel="stylesheet" type="text/css" href="{{ asset('footer/css/bootstrap.min.css') }}" >	
+	    <link rel="stylesheet" type="text/css" href="{{ asset('footer/css/style.css') }}" >
+		</div> <!-- /.main-page-wrapper -->
+{% endblock %}
+ </head>
+<body>
+
+{% block header %}
+	<header class="header-two">
+				<div class="top-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-8 col-12">
+								<ul class="left-widget">
+									
+									<li>
+										<div id="polyglotLanguageSwitcher">
+											<form action="#">
+												<select id="polyglot-language-options">
+													<option id="en" value="en" selected>English</option>
+													<option id="fr" value="fr">French</option>
+													<option id="de" value="de">German</option>
+													<option id="it" value="it">Italian</option>
+													<option id="es" value="es">Spanish</option>
+												</select>
+											</form>
+										</div> <!-- End #polyglotLanguageSwitcher -->
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-6 col-sm-4 col-12">
+								<ul class="social-icon">
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.top-header -->
+
+				<div class="theme-menu-wrapper">
+					<div class="container">
+						<div class="bg-wrapper clearfix">
+							<div class="logo float-left"><a href="index.html"><img class="logmer" src="{{ asset('front/images/logo/Layer1.png') }}" alt=""></a></div>
+							<!-- ============== Menu Warpper ================ -->
+							<div class="menu-wrapper float-left">
+								<nav id="mega-menu-holder" class="clearfix"> 
+									<ul class="clearfix">
+
+										
+										
+									  <li><a href="{{path('app_register')}}">Sign Up</a></li>
+									</ul>
+								</nav> <!-- /#mega-menu-holder -->
+							</div> <!-- /.menu-wrapper -->
+							<div class="right-widget float-right">
+								<ul>
+									<li class="cart-icon">
+										<a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
+									</li>
+									<li class="search-option">
+										<div class="dropdown">
+											<button type="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i></button>
+											<form action="#" class="dropdown-menu">
+												<input type="text" Placeholder="Enter Your Search">
+												<button><i class="fa fa-search"></i></button>
+											</form>
+										</div>
+									</li>
+								</ul>
+							</div> <!-- /.right-widget -->
+						</div> <!-- /.bg-wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.theme-menu-wrapper -->
+			  <!-- /.header-one -->
+			  </header>
+{% endblock %}
+
+  {% block body %}
+
+			
+			<!-- 
+			=============================================
+				About Company Stye Two
+			============================================== 
+			-->
+			<div class="about-compnay-two no-bg section-spacing">
+				<div class="overlay">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-12 text order-lg-last">
+								<div class="theme-title-one">
+									<h2>SHORT HISTORY</h2>
+								</div> <!-- /.theme-title-one -->
+								<p>Adventure sports are an exciting way to bond with family and friends while also pushing oneself out of their comfort zone. They provide an opportunity for families to come together and create memories that will last a lifetime. However, planning an adventure sports trip can be a daunting task, as it involves organizing transportation, equipment, and accommodations. This is where ATP, our application, comes in. Our user-friendly interface makes planning a trip easy and efficient, allowing families to focus on the fun and excitement of the adventure. With ATP, families can explore new destinations, try new activities, and challenge themselves while creating unforgettable memories. Our application takes care of everything from start to finish, ensuring a seamless experience for all involved. So why not try adventure sports with your family and let ATP do the rest?
+								</p>
+								<img src="{{ asset('front/images/signature-black.svg') }}" alt="" class="sign">
+							</div> <!-- /.col- -->
+							<div class="col-lg-6 col-12 order-lg-first">
+								<img src="{{ asset('front/images/about/1.jpeg') }}"alt="" class="left-img img-fluid mt-5">
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.overlay -->
+			</div> <!-- /.about-compnay-two -->
+
+
+			<!--
+			=====================================================
+				Why We Best
+			=====================================================
+			-->
+			<div class="why-we-best">
+				<div class="overlay">
+					<div class="container">
+						<div class="theme-title-one">
+							<h2>WE ARE ALWAYS BEST</h2>
+							<p>A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers</p>
+						</div> <!-- /.theme-title-one -->
+
+						<div class="wrapper row no-gutters">
+							<div class="col-lg-6 col-12 order-lg-last"><div class="img-box"></div></div>
+							<div class="col-lg-6 col-12 order-lg-first">
+								<ul class="best-list-item">
+									<li> "{{ asset('front/images/icon/data-report.svg') }}"
+										<img src= "{{ asset('front/images/icon/data-report.svg') }}" class="icon">
+										<h5><a href="#">Best Strategy</a></h5>
+										<p>The Love Boat soon will be making another run plore strange tools enter new worlds.</p>
+									</li>
+									<li> 
+										<img src="{{ asset('front/images/icon/commissions.svg') }}" class="icon">
+										<h5><a href="#">High-Quality Services</a></h5>
+										<p>The Love Boat soon will be making another run plore strange tools enter new worlds.</p>
+									</li>
+									<li>   
+										<img src="{{ asset('front/images/icon/customer-service.svg') }}"class="icon">
+										<h5><a href="#">Friendly Support</a></h5>
+										<p>The Love Boat soon will be making another run plore strange tools enter new worlds.</p>
+									</li>
+								</ul>
+							</div> <!-- /.col- -->
+						</div> <!-- /.wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.overlay -->
+			</div> <!-- /.why-we-best -->
+
+
+
+  {% endblock %}
+
+
+{% block footer %}
+<footer class="theme-footer-two">
+				<div class="top-footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 col-sm-6 col-12 logo-widget">  
+								<div class="logo"><a href="index.html"><img class="logmer" src="{{ asset('front/images/logo/Layer 3.png') }}"  alt=""></a></div>
+								<p>ATP est là pour réserver une expérience en famille inégale à toute autre 
+								expérience .Nos activités ludiques sont vos meilleures amies pour sortir de 
+							    votre zone de comfort </p>
+								<ul class="social-icon">
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div> <!-- /.logo-widget -->
+							<div class="col-lg-2 col-sm-6 col-12 footer-list">
+								<h6 class="title">Nos offres</h6>
+								<ul>
+									<li><a href="about.html">Nos Services</a></li>
+									<li><a href="service.html">Activité Récréative En Pleine Nature</a></li>
+									<li><a href="project.html">Devis En Ligne</a></li>
+									<li><a href="blog.html">Assistance Personnalisée</a></li>
+									<li><a href="contact.html">Une Panoplie De Boutiques</a></li>
+								</ul>
+							</div> <!-- /.footer-gallery -->
+							
+							<div class="col-lg-3 col-sm-6 col-12 contact-widget">
+								<h6 class="title">CONTACT</h6>
+								<ul>
+									<li>
+										<i class="flaticon-direction-signs"></i>
+										995, Ariana , Tunisie.
+									</li>
+									<li>
+										<i class="flaticon-multimedia-1"></i>
+										<a href="#">info@yoursupport.com</a>
+									</li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<a href="#">+1 747 123 4567</a>
+									</li>
+								</ul>
+							</div> <!-- /.contact-widget -->
+							 <!-- /.footer-list -->
+							    <div class="col-lg-2 col-sm-6 col-12 footer-list">
+								<h6 class="title">Nos Politiques</h6>
+								<ul>
+									<li><a href="about.html">Mentions Légales</a></li>
+									<li><a href="service.html">Politique De Confidentialité</a></li>
+									<li><a href="project.html">Politique en matière de cookies</a></li>
+								</ul>
+								</div>
+				<div class="bottom-footer">
+					<div class="container">
+				</div> <!-- /.bottom-footer -->
+			 <!-- /.theme-footer-two -->	
+			 </footer>		
+{% endblock %}
+
+</body>
+</html>
+

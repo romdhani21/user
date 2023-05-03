@@ -1,0 +1,80 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+
+
+}
+.container-form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    }
+    
+    nav li {
+    margin: 0 10px;
+    }
+    
+    .boutique-link a {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: uppercase;
+    }
+    
+    .profil-link a {
+    font-size: 1rem;
+    color: #666;
+    }
+    
+    
+  

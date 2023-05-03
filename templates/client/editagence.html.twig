@@ -1,0 +1,109 @@
+{% extends 'base-client.html.twig' %}
+
+{% block header %}
+	<header class="header-two">
+				<div class="top-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-8 col-12">
+								<ul class="left-widget">
+							<div class="col-md-6 col-sm-4 col-12">
+								<ul class="social-icon">
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.top-header -->
+
+				<div class="theme-menu-wrapper">
+					<div class="container">
+						<div class="bg-wrapper clearfix">
+							<div class="logo float-left"><a href="index.html"><img class="logmer" src="{{ asset('front/images/logo/Layer1.png') }}" alt=""></a></div>
+							<!-- ============== Menu Warpper ================ -->
+							<div class="menu-wrapper float-left">
+								<nav id="mega-menu-holder" class="clearfix"> 
+									<ul class="clearfix">
+										<li><a href="{{path('userindex')}}">Profile</a></li>
+										
+										
+									</ul>
+								</nav> <!-- /#mega-menu-holder -->
+							</div> <!-- /.menu-wrapper -->
+							<div class="right-widget float-right">
+								<ul>
+									<li class="cart-icon">
+										<a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
+									</li>
+									<li class="search-option">
+										<div class="dropdown">
+											<button type="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i></button>
+											<form action="#" class="dropdown-menu">
+												<input type="text" Placeholder="Enter Your Search">
+												<button><i class="fa fa-search"></i></button>
+											</form>
+										</div>
+									</li>
+								</ul>
+							</div> <!-- /.right-widget -->
+						</div> <!-- /.bg-wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.theme-menu-wrapper -->
+			  <!-- /.header-one -->
+			  </header>
+</header>
+{% endblock %}
+
+
+{% block body %}
+<main >
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header">
+            Modify Your Profile
+          </div>
+          <div class="card-body">
+            {{ form_start(form) }}
+            <div class="form-group">
+              {{ form_label(form.username, 'Username') }}
+              {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+              {{ form_label(form.email, 'Email') }}
+              {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+              {{ form_label(form.password.first, 'Password') }}
+              {{ form_widget(form.password.first, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+              {{ form_label(form.password.second, 'Confirm Password') }}
+              {{ form_widget(form.password.second, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            
+            <div class="form-group">
+              {{ form_label(form.adress, 'Address') }}
+              {{ form_widget(form.adress, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+              {{ form_label(form.phonenumber, 'Phone Number') }}
+              {{ form_widget(form.phonenumber, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+              {{ form_widget(form.modifier, {'attr': {'class': 'btn btn-primary'}}) }}
+            </div>
+            {{ form_end(form) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
+</main>
+{% include 'specific-content.html.twig' %}
+{% endblock %}

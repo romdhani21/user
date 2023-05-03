@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<title>{% block title %}{% endblock %}</title>
+{% block stylesheet %} 
+<link rel="stylesheet" type="text/css" href="{{ asset('front/css/client2.css') }}" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+</head>
+<body>
+  {% block header %}{% endblock %}
+
+  {% block body %}{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+{% extends 'base-back.html.twig' %}
+
+{% block body %}
+    <div class="row" style="display: flex;align-items: center;justify-content: center;margin-top: 150px;">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">List Of Users</h5>
+                    <!-- Table with stripped rows -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>UserName</th>
+                                <th>email</th>
+                                <th>role </th>
+                                <th>adress </th>
+                                <th>phone number </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                                <tr>
+                                    <td>{{ user.username }}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.roles|join(', ') }}</td>
+                                     <td>{{ user.adress }}</td>
+                                     <td>{{ user.phonenumber }}</td>
+                                    <td>
+                                        <form action="{{ path('user_delete', {'id': user.id}) }}" method="post" style="display: inline-block;">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+                                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                                        </form>
+                                        
+                                    </td>
+                                    <td>
+                                       {% if user.blocked %}
+            <button disabled>Bloqué</button>
+        {% else %}
+            {% if blocked %}
+                <button disabled>Bloquer</button>
+            {% else %}
+                <a href="{{ path('block_user', {'id': user.id}) }}"><button>Bloquer</button></a>
+            {% endif %}
+        {% endif %}
+       
+                               </td> </tr>
+                                
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <!-- End small tables -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
